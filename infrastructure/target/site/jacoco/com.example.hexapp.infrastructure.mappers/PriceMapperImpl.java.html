@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PriceMapperImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">infrastructure</a> &gt; <a href="index.source.html" class="el_package">com.example.hexapp.infrastructure.mappers</a> &gt; <span class="el_source">PriceMapperImpl.java</span></div><h1>PriceMapperImpl.java</h1><pre class="source lang-java linenums">package com.example.hexapp.infrastructure.mappers;
+
+import com.example.hexapp.domain.vo.Price;
+import com.example.hexapp.infrastructure.persistence.entity.PriceEntity;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+    date = &quot;2025-08-28T14:31:56+0200&quot;,
+    comments = &quot;version: 1.5.5.Final, compiler: javac, environment: Java 11.0.2 (Oracle Corporation)&quot;
+)
+@Component
+<span class="fc" id="L16">public class PriceMapperImpl implements PriceMapper {</span>
+
+    @Override
+    public Price toVO(PriceEntity entity) {
+<span class="pc bpc" id="L20" title="1 of 2 branches missed.">        if ( entity == null ) {</span>
+<span class="nc" id="L21">            return null;</span>
+        }
+
+<span class="fc" id="L24">        Long brandId = null;</span>
+<span class="fc" id="L25">        LocalDateTime startDate = null;</span>
+<span class="fc" id="L26">        LocalDateTime endDate = null;</span>
+<span class="fc" id="L27">        Integer priceList = null;</span>
+<span class="fc" id="L28">        Long productId = null;</span>
+<span class="fc" id="L29">        Integer priority = null;</span>
+<span class="fc" id="L30">        BigDecimal price = null;</span>
+<span class="fc" id="L31">        String curr = null;</span>
+
+<span class="fc" id="L33">        brandId = entity.getBrandId();</span>
+<span class="fc" id="L34">        startDate = entity.getStartDate();</span>
+<span class="fc" id="L35">        endDate = entity.getEndDate();</span>
+<span class="fc" id="L36">        priceList = entity.getPriceList();</span>
+<span class="fc" id="L37">        productId = entity.getProductId();</span>
+<span class="fc" id="L38">        priority = entity.getPriority();</span>
+<span class="fc" id="L39">        price = entity.getPrice();</span>
+<span class="fc" id="L40">        curr = entity.getCurr();</span>
+
+<span class="fc" id="L42">        Price price1 = new Price( brandId, startDate, endDate, priceList, productId, priority, price, curr );</span>
+
+<span class="fc" id="L44">        return price1;</span>
+    }
+
+    @Override
+    public PriceEntity toEntity(Price domain) {
+<span class="nc bnc" id="L49" title="All 2 branches missed.">        if ( domain == null ) {</span>
+<span class="nc" id="L50">            return null;</span>
+        }
+
+<span class="nc" id="L53">        PriceEntity priceEntity = new PriceEntity();</span>
+
+<span class="nc" id="L55">        priceEntity.setBrandId( domain.getBrandId() );</span>
+<span class="nc" id="L56">        priceEntity.setStartDate( domain.getStartDate() );</span>
+<span class="nc" id="L57">        priceEntity.setEndDate( domain.getEndDate() );</span>
+<span class="nc" id="L58">        priceEntity.setPriceList( domain.getPriceList() );</span>
+<span class="nc" id="L59">        priceEntity.setProductId( domain.getProductId() );</span>
+<span class="nc" id="L60">        priceEntity.setPriority( domain.getPriority() );</span>
+<span class="nc" id="L61">        priceEntity.setPrice( domain.getPrice() );</span>
+<span class="nc" id="L62">        priceEntity.setCurr( domain.getCurr() );</span>
+
+<span class="nc" id="L64">        return priceEntity;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

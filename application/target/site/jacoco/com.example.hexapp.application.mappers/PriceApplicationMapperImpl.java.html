@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PriceApplicationMapperImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">application</a> &gt; <a href="index.source.html" class="el_package">com.example.hexapp.application.mappers</a> &gt; <span class="el_source">PriceApplicationMapperImpl.java</span></div><h1>PriceApplicationMapperImpl.java</h1><pre class="source lang-java linenums">package com.example.hexapp.application.mappers;
+
+import com.example.hexapp.application.dto.PriceDTO;
+import com.example.hexapp.domain.vo.Price;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+    date = &quot;2025-08-28T14:31:51+0200&quot;,
+    comments = &quot;version: 1.5.5.Final, compiler: javac, environment: Java 11.0.2 (Oracle Corporation)&quot;
+)
+@Component
+<span class="nc" id="L16">public class PriceApplicationMapperImpl implements PriceApplicationMapper {</span>
+
+    @Override
+    public Price toVO(PriceDTO priceDTO) {
+<span class="nc bnc" id="L20" title="All 2 branches missed.">        if ( priceDTO == null ) {</span>
+<span class="nc" id="L21">            return null;</span>
+        }
+
+<span class="nc" id="L24">        Long brandId = null;</span>
+<span class="nc" id="L25">        LocalDateTime startDate = null;</span>
+<span class="nc" id="L26">        LocalDateTime endDate = null;</span>
+<span class="nc" id="L27">        Integer priceList = null;</span>
+<span class="nc" id="L28">        Long productId = null;</span>
+<span class="nc" id="L29">        Integer priority = null;</span>
+<span class="nc" id="L30">        BigDecimal price = null;</span>
+<span class="nc" id="L31">        String curr = null;</span>
+
+<span class="nc" id="L33">        brandId = priceDTO.getBrandId();</span>
+<span class="nc" id="L34">        startDate = priceDTO.getStartDate();</span>
+<span class="nc" id="L35">        endDate = priceDTO.getEndDate();</span>
+<span class="nc" id="L36">        priceList = priceDTO.getPriceList();</span>
+<span class="nc" id="L37">        productId = priceDTO.getProductId();</span>
+<span class="nc" id="L38">        priority = priceDTO.getPriority();</span>
+<span class="nc" id="L39">        price = priceDTO.getPrice();</span>
+<span class="nc" id="L40">        curr = priceDTO.getCurr();</span>
+
+<span class="nc" id="L42">        Price price1 = new Price( brandId, startDate, endDate, priceList, productId, priority, price, curr );</span>
+
+<span class="nc" id="L44">        return price1;</span>
+    }
+
+    @Override
+    public PriceDTO toDto(Price price) {
+<span class="nc bnc" id="L49" title="All 2 branches missed.">        if ( price == null ) {</span>
+<span class="nc" id="L50">            return null;</span>
+        }
+
+<span class="nc" id="L53">        PriceDTO.PriceDTOBuilder priceDTO = PriceDTO.builder();</span>
+
+<span class="nc" id="L55">        priceDTO.brandId( price.getBrandId() );</span>
+<span class="nc" id="L56">        priceDTO.startDate( price.getStartDate() );</span>
+<span class="nc" id="L57">        priceDTO.endDate( price.getEndDate() );</span>
+<span class="nc" id="L58">        priceDTO.priceList( price.getPriceList() );</span>
+<span class="nc" id="L59">        priceDTO.productId( price.getProductId() );</span>
+<span class="nc" id="L60">        priceDTO.priority( price.getPriority() );</span>
+<span class="nc" id="L61">        priceDTO.price( price.getPrice() );</span>
+<span class="nc" id="L62">        priceDTO.curr( price.getCurr() );</span>
+
+<span class="nc" id="L64">        return priceDTO.build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

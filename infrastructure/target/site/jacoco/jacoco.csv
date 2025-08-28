@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+infrastructure,com.example.hexapp.infrastructure.mappers,PriceMapperImpl,44,59,3,1,13,20,3,2,1,2
+infrastructure,com.example.hexapp.infrastructure.persistence.entity,PriceEntity,368,57,78,0,2,10,53,10,14,10
+infrastructure,com.example.hexapp.infrastructure.persistence.adapter,PriceRepositoryAdapter,10,112,0,0,3,12,1,2,1,2
+infrastructure,com.example.hexapp.infrastructure.config,BeanConfiguration,8,0,0,0,2,0,2,0,2,0

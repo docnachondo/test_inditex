@@ -1,0 +1,5 @@
+com\example\hexapp\infrastructure\persistence\adapter\PriceRepositoryAdapter.class
+com\example\hexapp\infrastructure\persistence\entity\PriceEntity.class
+com\example\hexapp\infrastructure\config\BeanConfiguration.class
+com\example\hexapp\infrastructure\mappers\PriceMapperImpl.class
+com\example\hexapp\infrastructure\mappers\PriceMapper.class
